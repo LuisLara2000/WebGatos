@@ -1,0 +1,35 @@
+﻿@model WebGatos.Models.PaginasModelo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Paginas</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebGatos.styles.css" asp-append-version="true" />
+
+</head>
+
+<body>
+    <a asp-action="MoverPagina" asp-route-delante="true">siguiente</a>
+    <a asp-action="MoverPagina" asp-route-delante="false">anteriror</a>
+
+    <h1>@Html.DisplayFor(Model => Model.current_page)</h1>
+
+    <br />
+    @foreach(var fact in Model.data)
+    {
+        <label>@fact.fact</label>
+        <br />
+    }
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>

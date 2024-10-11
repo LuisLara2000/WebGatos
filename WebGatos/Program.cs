@@ -8,7 +8,10 @@ namespace WebGatos
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            ////////////////////////////////////////////////////////// 
+            // Agregamos este servicio para poder hacer solicitudes // 
+            ////////////////////////////////////////////////////////// 
+            builder.Services.AddHttpClient();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -28,7 +31,7 @@ namespace WebGatos
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=GatoFacts}/{action=Titulo}/{id?}");
 
             app.Run();
         }
