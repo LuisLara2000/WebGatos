@@ -1,0 +1,66 @@
+﻿body {
+    background-color: #2D77F7;
+    color: #F7B62D;
+}
+
+.fuenteTitulo {
+    /*londrina-sketch-regular*/
+    font-family: "Londrina Sketch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:6em;
+}
+
+.fuenteComun1 {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size:4em;
+}
+
+.fuenteComun2 {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+/*titulo*/
+#contenedorTitulo{
+    text-align:center;
+}
+
+#contenedorFacts{
+    padding:0em 2em;
+    height:55vh;
+    display:grid;
+    gap:1em;
+    
+}
+
+#fact {
+    border-style: solid;
+    border-radius: 1em;
+    display: flex; /*si*/
+    align-items: center; /*si*/
+    justify-content: center; /*si*/
+    padding: 0em 1em;
+}
+
+#b {
+    color: #F7B62D;
+    text-decoration:none;
+    font-size:4em;
+}
+
+#contendorControles {
+    padding-top:1em;
+    display: flex;
+    justify-content: center; /*si*/
+    gap:1em;
+}
+
+#numero {
+    text-align: center;
+    width: 1em;
+}

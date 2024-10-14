@@ -45,7 +45,7 @@ namespace WebGatos.Controllers
         {
             TempData["paginaActual"] = 1;
             // llamo a la API
-            var respuesta = await _httpClient.GetAsync("facts?limit=5");
+            var respuesta = await _httpClient.GetAsync("facts?limit=3");
             // valido si la respuesta fue existosa
             if (respuesta.IsSuccessStatusCode)
             {
@@ -76,7 +76,7 @@ namespace WebGatos.Controllers
             }
             TempData["paginaActual"] = actual;
             // llamo a la API
-            var respuesta = await _httpClient.GetAsync("facts?limit=5&page=" + actual);
+            var respuesta = await _httpClient.GetAsync("facts?limit=3&page=" + actual);
             // valido si la respuesta fue existosa
             if (respuesta.IsSuccessStatusCode)
             {

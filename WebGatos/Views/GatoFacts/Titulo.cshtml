@@ -4,14 +4,36 @@
 }
 
 <header>
+    <!--ESTILOS-->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/titulo.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebGatos.styles.css" asp-append-version="true" />
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"
 </header>
 <body>
-    <h1>GATO WEB</h1>
-    <a asp-action="Mostrar">hechos</a>
-    <a asp-action="Paginas">paginas</a>
+    <div id="contenedorTitulo">
+        <div class="fuenteTitulo" id="textoTitulo">CATS</div>
+        <div class="fuenteTitulo" id="textoTitulo">FACTS</div>
+    </div>
+
+    <div id="contenedorOpciones">
+        <div>
+            <a id="btnOpcion" class="btn btn-outline-warning btn-lg" asp-action="Mostrar">
+                <span class="fuenteComun1">facts</span>
+            </a>
+        </div>
+        <div>
+            <a id="btnOpcion" class="btn btn-outline-warning btn-lg" asp-action="Paginas">
+                <span class="fuenteComun1">pages</span>
+            </a>
+        </div>
+    </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

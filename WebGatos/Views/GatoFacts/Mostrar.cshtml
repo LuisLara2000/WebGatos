@@ -10,17 +10,33 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>mostrar</title>
+    <!--ESTILOS-->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebGatos.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/facts.css" asp-append-version="true" />
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <h1>dato gato</h1>
+    <div id="contenedorTitulo">
+        <div class="fuenteTitulo">FACT</div>
+    </div>
    
-    <label> @Html.DisplayFor(modelItem => Model.fact) </label>
-    <br />
-    <label> @Html.DisplayFor(modelItem => Model.length) </label>
+    <div id="contenedorFact">
+        <div id="cardFact">
+            <p id="fact" class="fuenteComun2"> @Html.DisplayFor(modelItem => Model.fact) </p>
+        </div>
+    </div>
+    <div id="contenedorBoton">
+        <a id="btnOpcion" class="btn btn-outline-warning btn-lg" asp-action="Mostrar">
+            <span class="fuenteComun1">OTHER FACTS</span>
+        </a>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

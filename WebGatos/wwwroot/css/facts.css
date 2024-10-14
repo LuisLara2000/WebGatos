@@ -1,0 +1,65 @@
+﻿body {
+    background-color: #2D77F7;
+    color: #F7B62D;
+}
+
+.fuenteTitulo {
+    /*londrina-sketch-regular*/
+    font-family: "Londrina Sketch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:8em;
+}
+
+.fuenteComun1 {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size:1.5em;
+}
+
+.fuenteComun2 {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+
+/*titulo*/
+#contenedorTitulo{
+    text-align:center;
+}
+
+/*fact*/
+#contenedorFact{
+    height:40vh;
+    width:100%;
+    
+    display:flex;/*si*/
+    align-items:center;/*si*/
+    justify-content:center;/*si*/
+    padding:4em;
+
+}
+#cardFact {
+    border-style:solid;
+    padding:1em;
+    border-radius:1em;
+    /*
+    background: #F7B62D;
+    color: #2D77F7;
+        */
+}
+
+#contenedorBoton{
+    padding-top:3em;
+    text-align:center;
+}
+#btnOpcion {
+    width: 250px;
+    border: none;
+}
+
+.btn:hover {
+    color: #2D77F7;
+}

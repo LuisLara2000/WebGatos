@@ -9,24 +9,44 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Paginas</title>
+
+    <!--ESTILOS-->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebGatos.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages.css" asp-append-version="true" />
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <a asp-action="MoverPagina" asp-route-delante="true">siguiente</a>
-    <a asp-action="MoverPagina" asp-route-delante="false">anteriror</a>
 
-    <h1>@Html.DisplayFor(Model => Model.current_page)</h1>
+    <div id="contenedorTitulo">
+        <div class="fuenteTitulo">PAGES</div>
+    </div>
+    
+    <div id="contenedorFacts">
+        @foreach (var fact in Model.data)
+        {
+            <div id="fact">
+                <label class="fuenteComun2">@fact.fact</label>
+            </div>
+        }
+    </div>
 
-    <br />
-    @foreach(var fact in Model.data)
-    {
-        <label>@fact.fact</label>
-        <br />
-    }
+    <div id="contendorControles">
+        <a id="b" asp-action="MoverPagina" asp-route-delante="false">🡄</a>
+        
+        <p id="numero"class="fuenteComun1">@Html.DisplayFor(Model => Model.current_page)</p>
+        <a id="b" asp-action="MoverPagina" asp-route-delante="true">🡆</a>
+        
+    </div>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
